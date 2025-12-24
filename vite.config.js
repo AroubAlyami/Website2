@@ -1,8 +1,11 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-// For GitHub Pages, this is fine as-is since we use HashRouter.
-// If you deploy under a subpath, you can set base: "/REPO_NAME/".
+// IMPORTANT: For GitHub Pages project sites (username.github.io/REPO_NAME)
+// set base to "/REPO_NAME/" exactly.
+//
+// Replace YOUR_REPO_NAME below with your repo name.
 export default defineConfig({
+  base: "/Website2/",
   plugins: [react()],
 });
