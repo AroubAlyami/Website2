@@ -1,7 +1,7 @@
 export const SITE = {
   title: "Happy Birthday 🌅🌙",
   name: "Abdulrahman",
-  nicknameForHim: "Abdulrahman",
+  nicknameForHim: "Roomtempglazedcinnamonroll",
   nicknameForYou: "غروب",
   youName: "Aroub",
   heroLine: "I made you a website because… of course I did.",
