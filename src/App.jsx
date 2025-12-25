@@ -25,7 +25,9 @@ function ScrollToTopOnRoute() {
 function AppShell() {
   const [theme, setTheme] = useState(() => localStorage.getItem("theme") || "sunset");
   const [secretUnlocked, setSecretUnlocked] = useState(() => localStorage.getItem("secret") === "true");
-
+  const [catsUnlocked, setCatsUnlocked] = useState(
+  () => localStorage.getItem("cats") === "true");
+  
   const toggleTheme = () => {
     setTheme((t) => (t === "sunset" ? "moon" : "sunset"));
   };
@@ -47,19 +49,21 @@ function AppShell() {
     localStorage.setItem("secret", "true");
   });
 
-  // Typing easter eggs anywhere
-  useTypeEasterEgg({
-    onSunset: () => setTheme("sunset"),
-    onMoon: () => setTheme("moon"),
-    onWe: () => {
-      // tiny playful ping
-      const el = document.querySelector(".we-pill");
-      if (el) {
-        el.classList.add("pop");
-        setTimeout(() => el.classList.remove("pop"), 350);
-      }
-    },
-  });
+useTypeEasterEgg({
+  onSunset: () => setTheme("sunset"),
+  onMoon: () => setTheme("moon"),
+  onWe: () => {
+    const el = document.querySelector(".we-pill");
+    if (el) {
+      el.classList.add("pop");
+      setTimeout(() => el.classList.remove("pop"), 350);
+    }
+  },
+  onCats: () => {
+    setCatsUnlocked(true);
+    localStorage.setItem("cats", "true");
+  },
+});
 
   const pillText = useMemo(() => {
     if (theme === "sunset") return "🌅 sunset mode";
