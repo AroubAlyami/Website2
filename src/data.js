@@ -72,19 +72,19 @@ export const IMAGES = {
 // ====== Our Future Cats (Easter egg page) ======
 export const CATS = [
   {
-    name: "Cat #1 name here",
+    name: "Cat #1 Void",
     title: "CEO of naps",
-    image: "/images/cats/cat1.jpg",
+    image: "/images/cats/void.jpg",
   },
   {
-    name: "Cat #2 name here",
+    name: "Cat #2 Azza",
     title: "Professional zoomies",
-    image: "/images/cats/cat2.jpg",
+    image: "/images/cats/Azza.jpg",
   },
   {
-    name: "Cat #3 name here",
+    name: "Cat #3 Pokka",
     title: "Has opinions about everything",
-    image: "/images/cats/cat3.jpg",
+    image: "/images/cats/Pokka.jpg",
   },
 ];
 
