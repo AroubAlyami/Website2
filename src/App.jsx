@@ -89,7 +89,7 @@ useTypeEasterEgg({
         </div>
       </header>
 
-      <Nav secretUnlocked={secretUnlocked} />
+      <Nav secretUnlocked={secretUnlocked} catsUnlocked={catsUnlocked} />
 
       <main className="main">
         <Routes>
