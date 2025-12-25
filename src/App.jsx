@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import ThemeToggle from "./components/ThemeToggle";
 import useKonami from "./hooks/useKonami";
 import useTypeEasterEgg from "./hooks/useTypeEasterEgg";
+import Cats from "./pages/Cats";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
