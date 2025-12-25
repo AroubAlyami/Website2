@@ -58,3 +58,33 @@ export const GIFT = {
   extra:
     "PS: You’re still 6×6. I’m still a perfect square. Together we’re… suspiciously correct.",
 };
+
+// ====== Images you can fill in later ======
+export const IMAGES = {
+  hero: "/images/hero.jpg",
+  about: "/images/about.jpg",
+  sunset: "/images/sunset.jpg",
+  moon: "/images/moon.jpg",
+  us1: "/images/us1.jpg",
+  us2: "/images/us2.jpg",
+};
+
+// ====== Our Future Cats (Easter egg page) ======
+export const CATS = [
+  {
+    name: "Cat #1 name here",
+    title: "CEO of naps",
+    image: "/images/cats/cat1.jpg",
+  },
+  {
+    name: "Cat #2 name here",
+    title: "Professional zoomies",
+    image: "/images/cats/cat2.jpg",
+  },
+  {
+    name: "Cat #3 name here",
+    title: "Has opinions about everything",
+    image: "/images/cats/cat3.jpg",
+  },
+];
+
