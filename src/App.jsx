@@ -100,6 +100,9 @@ useTypeEasterEgg({
           <Route path="/texts" element={<Texts />} />
           <Route path="/learned" element={<Learned />} />
           <Route path="/gift" element={<Gift />} />
+          <Route path="/cats" element={catsUnlocked ? <Cats /> : <Navigate to="/" replace />}
+            />
+
           <Route
             path="/secret"
             element={secretUnlocked ? <Secret /> : <Navigate to="/" replace />}
