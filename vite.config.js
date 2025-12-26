@@ -6,6 +6,6 @@ import react from "@vitejs/plugin-react";
 //
 // Replace YOUR_REPO_NAME below with your repo name.
 export default defineConfig({
-  base: "/Website2/",
+  base: "/",
   plugins: [react()],
 });
