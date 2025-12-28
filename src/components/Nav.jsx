@@ -11,9 +11,9 @@ export default function Nav({ secretUnlocked, catsUnlocked }) {
       <NavLink to="/texts">Texts</NavLink>
       <NavLink to="/learned">Learned</NavLink>
       <NavLink to="/gift">Gift</NavLink>
+      <NavLink to="/cats">Cats</NavLink>
 
       {secretUnlocked && <NavLink to="/secret">Secret</NavLink>}
-      {catsUnlocked && <NavLink to="/cats">Cats</NavLink>}
     </nav>
   );
 }
