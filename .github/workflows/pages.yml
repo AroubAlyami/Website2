@@ -15,18 +15,21 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Debug files
+        run: ls -la
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
-          cache-dependency-path: package-lock.json
+          cache-dependency-path: ./package-lock.json
 
       - name: Install
         run: npm ci
@@ -38,6 +41,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+
 
   deploy:
     environment:
