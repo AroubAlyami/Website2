@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-export default function Nav({ secretUnlocked, catsUnlocked }) {
+export default function Nav({ secretUnlocked }) {
   return (
     <nav className="nav">
       <NavLink to="/" end>Home</NavLink>
