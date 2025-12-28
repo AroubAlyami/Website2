@@ -3,30 +3,31 @@
    ========================= */
 
 :root {
-  /* Core background */
   --bg-main: #120822;
   --bg-secondary: #1b0b2e;
   --bg-card: rgba(255, 255, 255, 0.05);
 
-  /* Text */
   --text-main: #ede9fe;
   --text-soft: #c4b5fd;
   --text-muted: #9ca3af;
 
-  /* Accents */
   --purple-accent: #7c3aed;
   --blue-accent: #3b82f6;
   --cyan-accent: #22d3ee;
   --warm-accent: #f59e0b;
   --warm-soft: #fdba74;
 
-  /* Effects */
   --glow-blue: 0 0 20px rgba(59, 130, 246, 0.35);
   --glow-warm: 0 0 20px rgba(245, 158, 11, 0.35);
 
   --radius: 16px;
-  --radius-small: 10px;
-  --transition: 0.3s ease;
+  --radius-small: 12px;
+  --transition: 0.25s ease;
+
+  /* New helpers */
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.28);
+  --border-soft: 1px solid rgba(255, 255, 255, 0.10);
+  --border-softer: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 /* =========================
@@ -44,8 +45,8 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
   background: radial-gradient(
       circle at top right,
       rgba(59, 130, 246, 0.15),
@@ -58,6 +59,39 @@ body {
     ),
     var(--bg-main);
   color: var(--text-main);
+}
+
+/* Better selection + focus */
+::selection {
+  background: rgba(34, 211, 238, 0.25);
+}
+:focus-visible {
+  outline: 2px solid rgba(34, 211, 238, 0.8);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+/* =========================
+   App container
+   ========================= */
+
+#root {
+  width: 100%;
+}
+
+.app {
+  width: 100%;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.75rem 1.5rem 2.5rem;
+}
+
+.topbar,
+.nav,
+.main,
+.footer {
+  width: 100%;
 }
 
 /* =========================
@@ -83,12 +117,13 @@ body {
 h1,
 h2,
 h3 {
-  font-weight: 600;
-  letter-spacing: 0.3px;
+  font-weight: 650;
+  letter-spacing: 0.2px;
+  margin: 0 0 0.75rem;
 }
 
 h1 {
-  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-size: clamp(2.1rem, 4.8vw, 3.1rem);
   background: linear-gradient(
     90deg,
     var(--purple-accent),
@@ -100,46 +135,268 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.65rem;
   color: var(--text-soft);
 }
 
 p {
-  line-height: 1.7;
+  line-height: 1.75;
   color: var(--text-main);
+  margin: 0 0 1rem;
 }
 
+small,
 .muted {
   color: var(--text-muted);
 }
 
+a {
+  color: var(--cyan-accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+a:hover {
+  color: var(--warm-accent);
+}
+
 /* =========================
-   Cards / sections
+   Topbar (make it feel like a header)
+   ========================= */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.1rem;
+  border-radius: 22px;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.07),
+      rgba(255, 255, 255, 0.03)
+    ),
+    rgba(0, 0, 0, 0.12);
+  border: var(--border-soft);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-soft);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-width: 0;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(124, 58, 237, 0.35),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 70% 30%,
+      rgba(59, 130, 246, 0.25),
+      transparent 60%
+    ),
+    rgba(255, 255, 255, 0.06);
+  border: var(--border-softer);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.18);
+}
+
+.brandText .title {
+  font-weight: 750;
+  letter-spacing: 0.2px;
+}
+.brandText .subtitle {
+  font-size: 0.92rem;
+  color: rgba(237, 233, 254, 0.78);
+  margin-top: 2px;
+}
+
+.topbarRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.we-pill {
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  border: var(--border-soft);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(237, 233, 254, 0.9);
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+}
+
+.we-pill.pop {
+  transform: scale(1.03);
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.18);
+}
+
+/* =========================
+   NAV banner with pills
+   ========================= */
+
+.nav {
+  margin-top: 0.9rem;
+  padding: 0.75rem 0.85rem;
+  border-radius: 20px;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.02)
+    ),
+    rgba(0, 0, 0, 0.10);
+  border: var(--border-soft);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* NavLink renders <a> */
+.nav a {
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid rgba(34, 211, 238, 0.18);
+  color: rgba(237, 233, 254, 0.85);
+  background: rgba(255, 255, 255, 0.03);
+  transition: var(--transition);
+}
+
+.nav a:hover {
+  border-color: rgba(245, 158, 11, 0.30);
+  background: rgba(245, 158, 11, 0.08);
+  color: var(--text-main);
+  transform: translateY(-1px);
+}
+
+/* active link in react-router */
+.nav a.active {
+  border-color: rgba(34, 211, 238, 0.45);
+  background: rgba(34, 211, 238, 0.10);
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.12);
+  color: var(--text-main);
+}
+
+/* =========================
+   Main + reusable section blocks
+   ========================= */
+
+.main {
+  margin-top: 1.2rem;
+}
+
+/* Use this wrapper on pages */
+.page {
+  display: grid;
+  gap: 1rem;
+}
+
+/* Big hero section at top of a page */
+.pageHero {
+  padding: 1.6rem 1.6rem 1.3rem;
+  border-radius: 22px;
+  background: linear-gradient(
+      180deg,
+      rgba(124, 58, 237, 0.12),
+      rgba(59, 130, 246, 0.06)
+    ),
+    rgba(255, 255, 255, 0.03);
+  border: var(--border-soft);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-soft);
+}
+
+.pageHero .kicker {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-size: 0.92rem;
+  color: rgba(237, 233, 254, 0.78);
+}
+
+.pageHero h1,
+.pageHero h2 {
+  margin-bottom: 0.5rem;
+}
+
+/* Normal sections */
+.section {
+  padding: 1.4rem 1.4rem 1.1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: var(--border-softer);
+  backdrop-filter: blur(10px);
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 0.75rem;
+}
+
+.sectionTitle h2 {
+  margin: 0;
+}
+
+.sectionHint {
+  font-size: 0.92rem;
+  color: rgba(156, 163, 175, 0.95);
+}
+
+/* small divider */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.18),
+    transparent
+  );
+  margin: 1.2rem 0;
+}
+
+/* =========================
+   Cards (existing, slightly upgraded)
    ========================= */
 
 .card {
   background: var(--bg-card);
   border-radius: var(--radius);
-  padding: 2rem;
-  margin: 1.5rem 0;
+  padding: 1.6rem;
+  margin: 0;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: var(--border-softer);
   transition: var(--transition);
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: var(--glow-blue);
 }
 
 /* =========================
-   Buttons
+   Buttons (minor polish)
    ========================= */
 
 button {
   border: none;
-  padding: 0.7rem 1.4rem;
-  border-radius: var(--radius-small);
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
   font-size: 1rem;
   cursor: pointer;
   color: #0f172a;
@@ -169,61 +426,12 @@ button.warm:hover {
 }
 
 /* =========================
-   Links
+   Image cards (keep yours, just align spacing)
    ========================= */
 
-a {
-  color: var(--cyan-accent);
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-a:hover {
-  color: var(--warm-accent);
-}
-
-/* =========================
-   Cute extras
-   ========================= */
-
-.highlight {
-  color: var(--warm-accent);
-}
-
-.glow {
-  text-shadow: 0 0 10px rgba(124, 58, 237, 0.6);
-}
-
-.divider {
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  margin: 2rem 0;
-}
-
-/* =========================
-   Mobile tweaks
-   ========================= */
-
-@media (max-width: 600px) {
-  .container {
-    padding: 1.5rem 1rem;
-  }
-
-  .card {
-    padding: 1.5rem;
-  }
-}
-
-/* ===== Image cards ===== */
 .imageCard {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: 18px;
   overflow: hidden;
   backdrop-filter: blur(10px);
@@ -239,11 +447,14 @@ a:hover {
 .imageWrap {
   width: 100%;
   aspect-ratio: 4 / 3;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(124,58,237,0.22), transparent 55%),
-    radial-gradient(circle at 80% 30%, rgba(59,130,246,0.18), transparent 55%),
-    radial-gradient(circle at 40% 90%, rgba(245,158,11,0.10), transparent 60%),
-    rgba(0,0,0,0.25);
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(124, 58, 237, 0.22),
+      transparent 55%
+    ),
+    radial-gradient(circle at 80% 30%, rgba(59, 130, 246, 0.18), transparent 55%),
+    radial-gradient(circle at 40% 90%, rgba(245, 158, 11, 0.10), transparent 60%),
+    rgba(0, 0, 0, 0.25);
   display: grid;
   place-items: center;
 }
@@ -267,10 +478,13 @@ a:hover {
 .imageSubtitle {
   margin-top: 6px;
   font-size: 13px;
-  color: rgba(237,233,254,0.72);
+  color: rgba(237, 233, 254, 0.72);
 }
 
-/* ===== Cats layout ===== */
+/* =========================
+   Cats layout (keep)
+   ========================= */
+
 .catsTop {
   display: flex;
   align-items: center;
@@ -292,23 +506,34 @@ a:hover {
   }
 }
 
-#root {
-  width: 100%;
-}
+/* =========================
+   Footer polish
+   ========================= */
 
-.app {
-  width: 100%;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 2rem 1.5rem;
-}
-
-.topbar,
-.nav,
-.main,
 .footer {
-  width: 100%;
+  margin-top: 1.4rem;
+  padding: 1rem 0.25rem 0;
+  color: rgba(156, 163, 175, 0.95);
+  font-size: 0.95rem;
 }
 
+/* =========================
+   Mobile tweaks
+   ========================= */
 
+@media (max-width: 600px) {
+  .app {
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .topbar {
+    padding: 1rem;
+    border-radius: 18px;
+  }
+
+  .pageHero,
+  .section {
+    padding: 1.15rem 1.1rem;
+    border-radius: 18px;
+  }
+}
