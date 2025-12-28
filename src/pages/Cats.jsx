@@ -28,7 +28,7 @@ export default function Cats() {
       </div>
 
       <div className="miniNote">
-        Tip: Put images in <code>public/images/cats/</code> and update the paths in <code>src/data.js</code>.
+        FYI: Void is a non-negotiable. You get your raw chicken, I get my blackhole.
       </div>
     </Section>
   );
