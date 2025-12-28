@@ -5,24 +5,23 @@ export const SITE = {
   nicknameForYou: "غروب",
   youName: "Aroub",
   heroLine: "I made you a website because… of course I did.",
-  footerLine: "Built with love, caffeine, and zero guarantees of bug-free behavior.",
+  footerLine: "Built with love, caffeine, a few tears and rants w chatGPT, and absolutely zero guarantees of bug-free behavior.",
 };
 
 export const ABOUT = {
-  aliases: ["Sunset Man", "6×6", "Bathroom Door Destroyer 🚪", "Coffee critic ☕"],
+  aliases: ["Moon Man", "6×6", "Bathroom Door Destroyer", "Matcha man", "Fish"],
   skills: [
+    "Swimming...hence the nickname",
     "Crisis management during PMS (elite)",
     "Knows exactly which flowers I like",
-    "Can fall asleep mid-serious-convo and still be deeply sincere",
+    "Can fall asleep mid-serious-convo. Truly a talent",
   ],
   status: "Loved. Deeply. (Also: supervised by a sunset enthusiast.)",
 };
 
 export const LAUGHS = [
-  "Talking about our babies before breakfast like it’s weather news",
-  "Breaking a door then immediately rating the coffee",
-  "Saying “me?” after an answer (softest vulnerability camouflage)",
-  "Being VERY proper while secretly being hilarious",
+  "Having to let go of the MANY opportunities to bully me. Very generous",
+  "Ragebaiting...like it's an olympic sport",
   "Using ‘we’ language that makes my brain short-circuit (in a cute way)",
 ];
 
