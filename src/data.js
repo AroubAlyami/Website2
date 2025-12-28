@@ -73,17 +73,17 @@ export const CATS = [
   {
     name: "Cat #1 Void",
     title: "CEO of naps",
-    image: "/images/cats/void.jpg",
+    image: "/images/cats/void.jpeg",
   },
   {
     name: "Cat #2 Azza",
     title: "Professional zoomies",
-    image: "/images/cats/Azza.jpg",
+    image: "/images/cats/Azza.jpeg",
   },
   {
     name: "Cat #3 Pokka",
     title: "Has opinions about everything",
-    image: "/images/cats/Pokka.jpg",
+    image: "/images/cats/pokka.jpeg",
   },
 ];
 
