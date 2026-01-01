@@ -54,9 +54,9 @@ export const GIFT = {
   title: "One Last Thing 🎁",
   button: "Click if you’re feeling dramatic",
   reveal:
-    "I’m really glad you were born. Also: dessert is non-negotiable today. Go be celebrated.",
+    "I’m really glad you were born. Also: dessert is non-negotiable today. Go be celebrated. I say crunchy chocolate cake",
   extra:
-    "PS: You’re still 6×6. I’m still a perfect square. Together we’re… suspiciously correct.",
+    "PS: I'm celebrating too bs you need to tell me what dessert you got so we can be TWINS",
 };
 
 // ====== Images you can fill in later ======
