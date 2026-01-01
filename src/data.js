@@ -11,27 +11,28 @@ export const SITE = {
 export const ABOUT = {
   aliases: ["Moon Man", "6×6", "Bathroom Door Destroyer", "Matcha man", "Fish"],
   skills: [
-    "Swimming...hence the nickname",
+    "Swimming...hence the 'Fish' nickname",
+    "Professional Technical Menace (Red Team)",
     "Crisis management during PMS (elite)",
     "Knows exactly which flowers I like",
+    "Knows how to make me laugh (even mid crying session - which is impressive)",
     "Can fall asleep mid-serious-convo. Truly a talent",
   ],
-  status: "Loved. Deeply. (Also: supervised by a sunset enthusiast.)",
+  status: "Loved. Deeply. (Also: supervised by a sunset enthusiast)",
 };
 
 export const LAUGHS = [
   "Having to let go of the MANY opportunities to bully me. Very generous",
-  "Ragebaiting...like it's an olympic sport",
-  "Using ‘we’ language that makes my brain short-circuit (in a cute way)",
+  "Ragebaiting...like it's an olympic sport"
 ];
 
 export const CHAT = [
-  { who: "You", text: "Birds are basically legs, vibes, and pure spite." },
-  { who: "Him", text: "منطقي… but why are you like this 😂" },
-  { who: "You", text: "Matcha emergency. The AUDACITY of no delivery app." },
-  { who: "Him", text: "What are we craving? 🧠" },
-  { who: "You", text: "I will pry your eyes open. You must listen to me." },
-  { who: "Him", text: "I might fall asleep listening to you… (affectionate)." },
+  { who: "Me", text: "GOOD MORNING SUNSHINE! the earth says HELLO!" },
+  { who: "You", text: "I'm going to kill someone" },
+  { who: "Me", text: "*Insert nervous sticker* ...Well, let's NOT do that...how about matcha instead?" },
+  { who: "You", text: "Fine. *Gets to work* ...I still want to kill someone." },
+  { who: "Me, completely unphased by now", text: "It's okayyy...look at this reel of a cat licking a lemon" },
+  { who: "You", text: "رائع  (Mission accomplished: murderous intent vanquished)" },
 ];
 
 export const LEARNED = [
