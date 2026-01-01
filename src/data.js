@@ -68,22 +68,13 @@ export const IMAGES = {
   us2: "/images/us2.jpg",
 };
 
-// ====== Our Future Cats (Easter egg page) ======
+// ====== Our Future Cats ======
+const base = import.meta.env.BASE_URL;
+
 export const CATS = [
-  {
-    name: "Cat #1 Void",
-    title: "CEO of naps",
-    image: "public/images/cats/void.jpeg",
-  },
-  {
-    name: "Cat #2 Azza",
-    title: "Professional zoomies",
-    image: "public/images/cats/Azza.jpeg",
-  },
-  {
-    name: "Cat #3 Pokka",
-    title: "Has opinions about everything",
-    image: "public/images/cats/pokka.jpeg",
-  },
+  { name: "Cat #1 Void", title: "CEO of naps", image: `${base}images/cats/void.jpeg` },
+  { name: "Cat #2 Azza", title: "Professional zoomies", image: `${base}images/cats/Azza.jpeg` },
+  { name: "Cat #3 Pokka", title: "Has opinions about everything", image: `${base}images/cats/pokka.jpeg` },
 ];
+
 
