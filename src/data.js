@@ -78,4 +78,40 @@ export const CATS = [
   { name: "Cat #3 Pokka", title: "Has opinions about everything", image: `${base}images/cats/pokka.jpeg` },
 ];
 
+export const TIMELINE = [
+  {
+    era: "Early",
+    title: "When it started feeling calm",
+    text: "Somewhere between small talk and silence, things began to feel easier.",
+  },
+  {
+    era: "Middle",
+    title: "The coffee era",
+    text: "Not a phase. More like a recurring theme with good timing.",
+  },
+  {
+    era: "Later",
+    title: "The steady part",
+    text: "Not loud. Not dramatic. Just consistent in the way that matters.",
+  },
+  {
+    era: "Now",
+    title: "This website",
+    text: "Not meant to be impressive. Meant to feel like effort and care.",
+  },
+];
+
+export const COMPLIMENTS = [
+  "You make calm feel like a real option.",
+  "You are quietly reliable, and it shows.",
+  "You have a way of making things feel less heavy.",
+  "You notice more than you admit.",
+  "You handle hard moments with more grace than most people.",
+  "You show up in ways that actually count.",
+  "You make space without making it feel like distance.",
+  "You are easy to trust when it matters.",
+  "You have good instincts, even when you pretend you don't.",
+  "You can be steady without being boring.",
+];
+
 
