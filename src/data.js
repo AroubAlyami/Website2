@@ -81,18 +81,18 @@ export const CATS = [
 export const TIMELINE = [
   {
     era: "Early",
-    title: "When it started feeling calm",
-    text: "Somewhere between small talk and silence, things began to feel easier.",
+    title: "The exciting beginnings",
+    text: "Between small talk and laughs, things felt fun.",
   },
   {
     era: "Middle",
-    title: "The coffee era",
-    text: "Not a phase. More like a recurring theme with good timing.",
+    title: "The no IQ era",
+    text: "Not a phase. More like a stupid break we both didn't want",
   },
   {
     era: "Later",
-    title: "The steady part",
-    text: "Not loud. Not dramatic. Just consistent in the way that matters.",
+    title: "The RETURN",
+    text: "Not loud. Not dramatic. (Lies - Insanely dramatic). Just back to consistent in a way that matters.",
   },
   {
     era: "Now",
@@ -113,6 +113,7 @@ export const COMPLIMENTS = [
   "I feel like I can trust you",
   "You have good instincts to an extent...yes, I'm still not eating the bugs thing",
   "You can text while driving (Insane skill btw)",
+  "Stylish whhite boi",
 ];
 
 
