@@ -105,7 +105,7 @@ export const COMPLIMENTS = [
   "You make calm feel like a real option.",
   "You are quietly reliable, and it shows.",
   "You have a way of making things feel less heavy.",
-  "You notice more than you admit.",
+  "You use your brain pretty well",
   "You handle hard moments with more grace than most people.",
   "You show up in ways that actually count.",
   "You make space without making it feel like distance.",
