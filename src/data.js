@@ -102,16 +102,17 @@ export const TIMELINE = [
 ];
 
 export const COMPLIMENTS = [
-  "You make calm feel like a real option.",
-  "You are quietly reliable, and it shows.",
-  "You have a way of making things feel less heavy.",
+  "You're very calm",
+  "You are reliable and hardworking",
+  "You have a way of making things feel less heavy (The reels help a lot)",
   "You use your brain pretty well",
   "You handle hard moments with more grace than most people.",
   "You show up in ways that actually count.",
-  "You make space without making it feel like distance.",
-  "You are easy to trust when it matters.",
-  "You have good instincts, even when you pretend you don't.",
-  "You can be steady without being boring.",
+  "Not exactly a compliment, but you've got weird taste in cats?",
+  "Great sense of humor - when I'm not the butt of the joke",
+  "I feel like I can trust you",
+  "You have good instincts to an extent...yes, I'm still not eating the bugs thing",
+  "You can text while driving (Insane skill btw)",
 ];
 
 
