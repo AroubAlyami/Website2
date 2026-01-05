@@ -9,7 +9,7 @@ export default function SunMoon() {
         <div className="panel sunset">
           <h3>Sunsets 🌅</h3>
           <p>{SUN_MOON.sunset}</p>
-          <div className="mini">PS: orange is now officially a safe color again.</div>
+          <div className="mini">PS: No one sees green in the sunset but you.</div>
         </div>
 
         <div className="panel moon">
