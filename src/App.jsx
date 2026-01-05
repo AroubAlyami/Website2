@@ -8,7 +8,6 @@ import useTypeEasterEgg from "./hooks/useTypeEasterEgg";
 import Cats from "./pages/Cats";
 import Timeline from "./pages/Timeline";
 import Compliments from "./pages/Compliments";
-import { Routes, Route } from "react-router-dom";
 import ArtGallery from "./pages/ArtGallery";
 
 import Home from "./pages/Home";
