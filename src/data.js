@@ -49,7 +49,7 @@ export const SUN_MOON = {
   sunset:
     "I always loved sunsets. But now, I love them more because they remind me of you",
   moon:
-    "I never noticed the moon before, not unitl you made me notice it. and now, I look for it every night. (Cute tidbit: I commented about the moon so much, my family now notices it as well "Aroub look! the moon!")",
+    "I never noticed the moon before, not unitl you made me notice it. and now, I look for it every night. (Cute tidbit: I commented about the moon so much, my family now notices it as well)",
 };
 
 export const GIFT = {
