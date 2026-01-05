@@ -43,7 +43,7 @@ export default function Compliments() {
         </div>
 
         <div className="miniNote">
-          Tip: If you want it to feel more personal, replace the COMPLIMENTS array in data.js with your own lines.
+          (I can see you giggling).
         </div>
       </div>
     </Section>
