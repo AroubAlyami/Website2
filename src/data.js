@@ -98,7 +98,7 @@ export const TIMELINE = [
   {
     era: "Now",
     title: "This website",
-    text: "Not meant to be impressive. Meant to feel like effort and care.",
+    text: "Not meant to be impressive (it is fckin impressive). Meant to feel like effort and care (it is effort and care. FEEL CARED FOR RN OR I WILL BITE YOU).",
   },
 ];
 
@@ -114,7 +114,12 @@ export const COMPLIMENTS = [
   "I feel like I can trust you",
   "You have good instincts to an extent...yes, I'm still not eating the bugs thing",
   "You can text while driving (Insane skill btw)",
-  "Stylish whhite boi",
+  "Stylish white boi",
+  "Your brain feels like a calm room w good lighting...and really good pizza...and rdr2...w a cozy blanket",
+  "You give 'safe place' energy",
+  "Best decision I made",
+  "You're my favorite person to be confused with",
+  "",
 ];
 
 
