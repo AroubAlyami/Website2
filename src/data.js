@@ -119,7 +119,15 @@ export const COMPLIMENTS = [
   "You give 'safe place' energy",
   "Best decision I made",
   "You're my favorite person to be confused with",
-  "",
+  "High quality human",
+  "Emotionally enviromentally friendly",
+  "I'd trust you w my charger",
+  "My emotional support human (yes, you're airplane ticket should be free)",
+  "If you were a song, I would shuffle through my playlist till I found you",
+  "You're like the dream you try to go back to sleep to continue",
+  "You're the best plot twist I never planned for",
+  "My fav reoccuring thought (shawty like a melody in my head)",
+  "if you were a form of lighting, you would be lowlights",
 ];
 
 
