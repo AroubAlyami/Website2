@@ -8,6 +8,8 @@ import useTypeEasterEgg from "./hooks/useTypeEasterEgg";
 import Cats from "./pages/Cats";
 import Timeline from "./pages/Timeline";
 import Compliments from "./pages/Compliments";
+import { Routes, Route } from "react-router-dom";
+import ArtGallery from "./pages/ArtGallery";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -105,6 +107,8 @@ useTypeEasterEgg({
           <Route path="/cats" element={<Cats />} />
           <Route path="/timeline" element={<Timeline />} />
           <Route path="/compliments" element={<Compliments />} />
+          <Route path="/art-gallery" element={<ArtGallery />} />
+
 
 
             />
