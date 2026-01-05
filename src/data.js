@@ -64,7 +64,7 @@ export const GIFT = {
 export const IMAGES = {
   hero: "/images/hero.jpg",
   about: "/images/about.jpg",
-  sunset: "/images/sunset.jpg",
+  sunset: "/images/sunset.jpeg",
   moon: "/images/moon.jpg",
   us1: "/images/us1.jpg",
   us2: "/images/us2.jpg",
