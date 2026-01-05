@@ -24,7 +24,8 @@ export const ABOUT = {
 export const LAUGHS = [
   "Having to let go of the MANY opportunities to bully me. Very generous",
   "Ragebaiting...like it's an olympic sport",
-  "The weirdest fyp page I have ever seen..."
+  "The weirdest fyp page I have ever seen...",
+  "btw, every opinion I have about you is a fact...do with that what you will...",
 ];
 
 export const CHAT = [
@@ -128,6 +129,8 @@ export const COMPLIMENTS = [
   "You're the best plot twist I never planned for",
   "My fav reoccuring thought (shawty like a melody in my head)",
   "if you were a form of lighting, you would be lowlights",
+  "Loading compliment...whoops! couldn't find one cuz you pissed me off before I wrote this",
+  "I had something to say but I forgot"
 ];
 
 
