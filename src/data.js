@@ -133,4 +133,13 @@ export const COMPLIMENTS = [
   "I had something to say but I forgot"
 ];
 
+export const ART_GALLERY = [
+  {
+    src: "images/sunset.jpeg",
+    title: "Sunset (Hand-drawn)",
+    note: "Hand-drawn piece",
+  },
+  // Add more art images here:
+  // { src: "images/art2.jpg", title: "Sketch 2", note: "" },
+];
 
