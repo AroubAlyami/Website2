@@ -109,9 +109,6 @@ useTypeEasterEgg({
           <Route path="/art-gallery" element={<ArtGallery />} />
 
 
-
-            />
-
           <Route
             path="/secret"
             element={secretUnlocked ? <Secret /> : <Navigate to="/" replace />}
