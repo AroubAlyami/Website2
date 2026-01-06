@@ -135,51 +135,50 @@ export const COMPLIMENTS = [
 
 export const ART_GALLERY = [
   {
-    src: "images/sunset.jpeg",
+    src: "art/sunset.jpeg",
     title: "Sunset",
     note: "Vibrant...what the taste of mango would look like",
   },
   {
-    src: "images/art/MoonMountain.jpg",
+    src: "art/MoonMountain.jpg",
     title: "Moon Mountain",
     note: "Night sky study",
   },
   {
-    src: "images/art/Rdr2.jpg",
+    src: "art/Rdr2.jpg",
     title: "Swing at Sunset",
     note: "Arthur would like it here",
   },
   {
-    src: "images/art/LilMan.jpg",
+    src: "art/LilMan.jpg",
     title: "Lil Man",
     note: "Like a book I read",
   },
   {
-    src: "images/art/Flowers.jpg",
+    src: "art/Flowers.jpg",
     title: "Flowers",
     note: "My fav",
   },
   {
-    src: "images/art/MoonCloak.jpg",
+    src: "art/MoonCloak.jpg",
     title: "Moon Cloak",
     note: "Dancing with the moon",
   },
   {
-    src: "images/art/JblHssan.jpg",
+    src: "art/JblHssan.jpg",
     title: "Teal Dunes",
     note: "Where the witches live",
   },
   {
-    src: "images/art/LittlePeople.jpg",
+    src: "art/LittlePeople.jpg",
     title: "Little People",
     note: "Confused little people",
   },
   {
-    src: "images/art/Adam.jpg",
+    src: "art/Adam.jpg",
     title: "Star Camp",
     note: "Adam with his camel",
   },
-  // Add more art images here:
-  // { src: "images/art2.jpg", title: "Sketch 2", note: "" },
 ];
+
 
