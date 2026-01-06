@@ -38,7 +38,7 @@ export default function Compliments() {
 
           <ConfettiButton
             label="Extra"
-            message="Approved. Keep going."
+            message="Approved. Keep going. Yes, I can see you smiling"
           />
         </div>
 
