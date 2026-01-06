@@ -8,6 +8,31 @@
    ========================= */
 
 :root {
+  /* DEFAULT THEME = sunset (prevents white background before JS sets data-theme) */
+  --bg-main: #120822;
+  --bg-secondary: #1b0b2e;
+  --bg-card: rgba(255, 255, 255, 0.05);
+
+  --text-main: #ede9fe;
+  --text-soft: #c4b5fd;
+  --text-muted: #9ca3af;
+
+  --purple-accent: #7c3aed;
+  --blue-accent: #3b82f6;
+  --cyan-accent: #22d3ee;
+
+  --warm-accent: #f59e0b;
+  --warm-soft: #fdba74;
+
+  --glow-blue: 0 0 20px rgba(59, 130, 246, 0.35);
+  --glow-warm: 0 0 20px rgba(245, 158, 11, 0.35);
+
+  --bg-grad-1: radial-gradient(circle at top right, rgba(59, 130, 246, 0.15), transparent 40%);
+  --bg-grad-2: radial-gradient(circle at bottom left, rgba(245, 158, 11, 0.12), transparent 40%);
+  --bg-grad-3: transparent;
+
+  --headline-grad: linear-gradient(90deg, var(--purple-accent), var(--blue-accent), var(--warm-accent));
+
   --radius: 16px;
   --radius-small: 12px;
   --transition: 0.25s ease;
@@ -16,6 +41,7 @@
   --border-soft: 1px solid rgba(255, 255, 255, 0.10);
   --border-softer: 1px solid rgba(255, 255, 255, 0.07);
 }
+
 
 /* Default theme (sunset) */
 :root[data-theme="sunset"] {
@@ -47,31 +73,34 @@
 
 /* Moon theme */
 :root[data-theme="moon"] {
-  --bg-main: #070b1b;
-  --bg-secondary: #0b1230;
-  --bg-card: rgba(255, 255, 255, 0.045);
+  --bg-main: #050716;
+  --bg-secondary: #070b22;
+  --bg-card: rgba(255, 255, 255, 0.04);
 
-  --text-main: #ecf2ff;
-  --text-soft: #c7d2fe;
-  --text-muted: rgba(203, 213, 225, 0.78);
+  --text-main: rgba(236, 242, 255, 0.92);
+  --text-soft: rgba(210, 220, 255, 0.86);
+  --text-muted: rgba(203, 213, 225, 0.72);
 
-  /* Moon palette: deep blues + silvery whites */
-  --purple-accent: #8b9cff;   /* soft periwinkle */
-  --blue-accent: #60a5fa;     /* sky blue */
-  --cyan-accent: #a5f3fc;     /* icy cyan */
+  /* silvery accents */
+  --purple-accent: #b7c3ff; /* soft moonlit lavender */
+  --blue-accent: #78a6ff;   /* cold blue */
+  --cyan-accent: #c7f9ff;   /* icy highlight */
 
-  --warm-accent: #e5e7eb;     /* "silver" instead of warm */
-  --warm-soft: #94a3b8;       /* slate silver */
+  /* “warm” becomes silver in moon mode */
+  --warm-accent: #e8edf7;
+  --warm-soft: #9aa7c2;
 
-  --glow-blue: 0 0 22px rgba(96, 165, 250, 0.30);
-  --glow-warm: 0 0 22px rgba(229, 231, 235, 0.22);
+  --glow-blue: 0 0 26px rgba(120, 166, 255, 0.22);
+  --glow-warm: 0 0 26px rgba(232, 237, 247, 0.16);
 
-  --bg-grad-1: radial-gradient(circle at 20% 20%, rgba(148, 163, 184, 0.14), transparent 45%);
-  --bg-grad-2: radial-gradient(circle at 80% 30%, rgba(96, 165, 250, 0.10), transparent 45%);
-  --bg-grad-3: radial-gradient(circle at 50% 90%, rgba(165, 243, 252, 0.06), transparent 55%);
+  /* moonlight background */
+  --bg-grad-1: radial-gradient(circle at 25% 20%, rgba(232, 237, 247, 0.10), transparent 46%);
+  --bg-grad-2: radial-gradient(circle at 80% 35%, rgba(120, 166, 255, 0.10), transparent 50%);
+  --bg-grad-3: radial-gradient(circle at 50% 95%, rgba(199, 249, 255, 0.06), transparent 60%);
 
-  --headline-grad: linear-gradient(90deg, rgba(229, 231, 235, 0.95), rgba(96, 165, 250, 0.95), rgba(165, 243, 252, 0.95));
+  --headline-grad: linear-gradient(90deg, rgba(232, 237, 247, 0.95), rgba(120, 166, 255, 0.95), rgba(199, 249, 255, 0.95));
 }
+
 
 
 /* =========================
@@ -83,6 +112,26 @@
 *::after {
   box-sizing: border-box;
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+:root[data-theme="moon"] body::before {
+  opacity: 0.12;
+  background:
+    radial-gradient(circle at 25% 18%, rgba(232, 237, 247, 0.22), transparent 45%),
+    url("art/MoonMountain.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(0.15) contrast(1.05);
+}
+
 
 html,
 body {
