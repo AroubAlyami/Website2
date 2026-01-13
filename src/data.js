@@ -29,12 +29,12 @@ export const LAUGHS = [
 ];
 
 export const CHAT = [
-  { who: "Me", text: "GOOD MORNING SUNSHINE! the earth says HELLO!" },
-  { who: "You", text: "I'm going to kill someone" },
-  { who: "Me", text: "*Insert nervous sticker* ...Well, let's NOT do that...how about matcha instead (Hot chocolate in the winter)?" },
-  { who: "You", text: "Fine. *Gets to work* ...I still want to kill someone." },
-  { who: "Me, completely unphased by now", text: "It's okayyy...look at this reel of a cat licking a lemon" },
-  { who: "You", text: "رائع  (Mission accomplished: murderous intent vanquished)" },
+  { who: "Me:", text: "GOOD MORNING SUNSHINE! the earth says HELLO!" },
+  { who: "You:", text: "I'm going to kill someone" },
+  { who: "Me:", text: "*Insert nervous sticker* ...Well, let's NOT do that...how about matcha instead (Hot chocolate in the winter)?" },
+  { who: "You:", text: "Fine. *Gets to work* ...I still want to kill someone." },
+  { who: "Me (completely unphased by now):", text: "It's okayyy...look at this reel of a cat licking a lemon" },
+  { who: "You:", text: "رائع  (Mission accomplished: murderous intent vanquished)" },
 ];
 
 export const LEARNED = [
