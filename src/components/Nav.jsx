@@ -15,6 +15,10 @@ export default function Nav({ secretUnlocked }) {
       <NavLink to="/timeline">Timeline</NavLink>
       <NavLink to="/compliments">Compliments</NavLink>
       <NavLink to="/art-gallery">Art gallery</NavLink>
+      <NavLink to="/yesno">Yes/No</NavLink>
+      <NavLink to="/kanye">Kanye</NavLink>
+      <NavLink to="/do-something">Do something</NavLink>
+
 
 
 
