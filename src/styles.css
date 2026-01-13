@@ -892,3 +892,33 @@ button.warm:hover {
   line-height: 1;
 }
 
+.stickerZone {
+  position: relative;
+  min-height: 70vh;
+}
+
+.sticker {
+  position: absolute;
+  pointer-events: none;
+  z-index: 4;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.25));
+  opacity: 0.95;
+}
+
+.stickerClear {
+  position: sticky;
+  top: 10px;
+  margin-left: auto;
+  z-index: 6;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 999px;
+  border: var(--border-soft);
+  background: rgba(255,255,255,0.06);
+  color: var(--text-main);
+}
+.stickerClear:hover {
+  box-shadow: var(--glow-blue);
+}
+
