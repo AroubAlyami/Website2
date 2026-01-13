@@ -133,6 +133,25 @@ export const COMPLIMENTS = [
   "I had something to say but I forgot"
 ];
 
+export const STICKERS = [
+  "stickers/Az.PNG",
+  "stickers/CanYouNot.PNG",
+  "stickers/IQ.PNG",
+  "stickers/azooz.PNG",
+  "stickers/choke.PNG",
+  "stickers/drama.PNG",
+  "stickers/guilty.PNG",
+  "stickers/handshake.PNG",
+  "stickers/oops.PNG",
+  "stickers/patpat.PNG",
+  "stickers/prettyBoi.PNG",
+  "stickers/slippers.PNG",
+  "stickers/tehe.PNG",
+  "stickers/thumbsUp.PNG",
+  "stickers/whoops.PNG",
+];
+
+
 export const ART_GALLERY = [
   {
     src: "art/sunset.jpeg",
