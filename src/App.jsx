@@ -14,10 +14,7 @@ import DoSomething from "./pages/DoSomething";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
-import SunMoon from "./pages/SunMoon";
-import Laughs from "./pages/Laughs";
 import Texts from "./pages/Texts";
-import Learned from "./pages/Learned";
 import Gift from "./pages/Gift";
 import Secret from "./pages/Secret";
 
