@@ -10,7 +10,6 @@ import Timeline from "./pages/Timeline";
 import Compliments from "./pages/Compliments";
 import ArtGallery from "./pages/ArtGallery";
 import YesNo from "./pages/YesNo";
-import Kanye from "./pages/Kanye";
 import DoSomething from "./pages/DoSomething";
 
 import Home from "./pages/Home";
