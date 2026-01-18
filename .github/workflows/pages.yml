@@ -18,27 +18,28 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - run: npm ci
+      - run: npm run build
 
-      - name: Install
-        run: npm ci
-
-      - name: Build
-        run: npm run build
-
-      - name: Debug dist
-        run: ls -la dist
+      - name: Debug dist exists
+        run: |
+          echo "Listing repo root:"
+          ls -la
+          echo "Listing dist:"
+          ls -la dist
+          echo "Disk usage dist:"
+          du -sh dist
 
       - name: Upload artifact
+        if: always()
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+
 
   deploy:
     needs: build
