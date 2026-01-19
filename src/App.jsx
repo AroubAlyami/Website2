@@ -15,6 +15,8 @@ import About from "./pages/About";
 import Texts from "./pages/Texts";
 import Gift from "./pages/Gift";
 import Secret from "./pages/Secret";
+  import StickerLayer from "./components/StickerLayer";
+
 
 function ScrollToTopOnRoute() {
   const { pathname } = useLocation();
@@ -27,7 +29,7 @@ function AppShell() {
   const [secretUnlocked, setSecretUnlocked] = useState(() => localStorage.getItem("secret") === "true");
   const [catsUnlocked, setCatsUnlocked] = useState(
   () => localStorage.getItem("cats") === "true");
-  
+
   const toggleTheme = () => {
     setTheme((t) => (t === "sunset" ? "moon" : "sunset"));
   };
@@ -90,6 +92,8 @@ useTypeEasterEgg({
       </header>
 
       <Nav secretUnlocked={secretUnlocked} catsUnlocked={catsUnlocked} />
+
+      <StickerLayer enabled density={1} />
 
       <main className="main">
         <Routes>
