@@ -1,4 +1,5 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
+
 import { STICKERS } from "../data";
 
 function rand(min, max) {
@@ -12,6 +13,27 @@ export default function StickerLayer({ enabled = true, density = 1 }) {
   const pick = useMemo(() => {
     return sources.length ? sources : [];
   }, [sources]);
+  useEffect(() => {
+  if (!enabled || pick.length === 0) return;
+
+  const interval = setInterval(() => {
+    const src = pick[Math.floor(Math.random() * pick.length)];
+
+    const newSticker = {
+      id: crypto.randomUUID(),
+      src,
+      x: rand(5, window.innerWidth - 5),
+      y: rand(5, window.innerHeight - 5),
+      size: rand(50, 95),
+      rot: rand(-30, 30),
+    };
+
+    setPlaced((p) => [...p, newSticker].slice(-80));
+  }, 2500); // every 2.5 seconds
+
+  return () => clearInterval(interval);
+}, [enabled, pick]);
+
 
   const drop = (e) => {
     if (!enabled || pick.length === 0) return;
