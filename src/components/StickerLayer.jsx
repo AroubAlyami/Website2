@@ -11,29 +11,72 @@ export default function StickerLayer({ enabled = true, density = 1 }) {
 
   const pick = useMemo(() => (sources.length ? sources : []), [sources]);
 
-  /* RANDOM AUTO STICKERS */
+  // Spawn helper
+  const makeSticker = ({ x, y }) => {
+    const chosen = pick[Math.floor(Math.random() * pick.length)];
+    return {
+      id: crypto.randomUUID(),
+      src: chosen.src,
+      x,
+      y,
+      size: rand(45, 95),
+      rot: rand(-25, 25),
+      // float behavior
+      vy: rand(0.25, 0.75),      // speed down (px per tick)
+      vx: rand(-0.12, 0.12),     // tiny side drift
+      spin: rand(-0.12, 0.12),   // tiny rotation drift
+      life: 0,
+    };
+  };
+
+  // AUTO SPAWN (random)
   useEffect(() => {
     if (!enabled || pick.length === 0) return;
 
     const interval = setInterval(() => {
-      const chosen = pick[Math.floor(Math.random() * pick.length)];
+      const s = makeSticker({
+        x: rand(40, window.innerWidth - 40),
+        y: rand(-60, 40), // start slightly above/top
+      });
 
-      const newSticker = {
-        id: crypto.randomUUID(),
-        src: chosen.src,
-        x: rand(20, window.innerWidth - 20),
-        y: rand(20, window.innerHeight - 20),
-        size: rand(55, 95),
-        rot: rand(-30, 30),
-      };
-
-      setPlaced((p) => [...p, newSticker].slice(-80));
-    }, 2500);
+      setPlaced((p) => [...p, s].slice(-120));
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [enabled, pick]);
 
-  /* CLICK STICKERS */
+  // FLOAT ANIMATION LOOP
+  useEffect(() => {
+    if (!enabled) return;
+
+    let raf = 0;
+
+    const tick = () => {
+      setPlaced((prev) => {
+        const h = window.innerHeight;
+
+        const next = prev
+          .map((s) => ({
+            ...s,
+            x: s.x + s.vx,
+            y: s.y + s.vy,
+            rot: s.rot + s.spin,
+            life: s.life + 1,
+          }))
+          // remove once it drifts off the bottom (with a little buffer)
+          .filter((s) => s.y < h + 140);
+
+        return next;
+      });
+
+      raf = requestAnimationFrame(tick);
+    };
+
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [enabled]);
+
+  // CLICK SPAWN (burst)
   const drop = (e) => {
     if (!enabled || pick.length === 0) return;
 
@@ -46,27 +89,23 @@ export default function StickerLayer({ enabled = true, density = 1 }) {
 
     const count = Math.max(1, Math.round(density));
 
-    const newOnes = Array.from({ length: count }).map(() => {
-      const chosen = pick[Math.floor(Math.random() * pick.length)];
-
-      return {
-        id: crypto.randomUUID(),
-        src: chosen.src,
+    const newOnes = Array.from({ length: count }).map(() =>
+      makeSticker({
         x: x + rand(-20, 20),
         y: y + rand(-20, 20),
-        size: rand(45, 85),
-        rot: rand(-25, 25),
-      };
-    });
+      })
+    );
 
-    setPlaced((p) => [...p, ...newOnes].slice(-80));
+    setPlaced((p) => [...p, ...newOnes].slice(-120));
   };
 
   const clear = () => setPlaced([]);
 
   return (
     <div className="stickerZone" onClick={drop}>
-      <button className="stickerClear" onClick={clear}>🧽</button>
+      <button className="stickerClear" onClick={clear} title="Clear stickers">
+        🧽
+      </button>
 
       {placed.map((s) => (
         <img
@@ -78,10 +117,7 @@ export default function StickerLayer({ enabled = true, density = 1 }) {
             left: s.x,
             top: s.y,
             width: s.size,
-            position: "fixed",
             transform: `translate(-50%, -50%) rotate(${s.rot}deg)`,
-            pointerEvents: "none",
-            zIndex: 999,
           }}
           draggable={false}
         />
