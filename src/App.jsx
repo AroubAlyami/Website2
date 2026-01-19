@@ -6,7 +6,6 @@ import ThemeToggle from "./components/ThemeToggle";
 import useKonami from "./hooks/useKonami";
 import useTypeEasterEgg from "./hooks/useTypeEasterEgg";
 import Cats from "./pages/Cats";
-import Timeline from "./pages/Timeline";
 import Compliments from "./pages/Compliments";
 import ArtGallery from "./pages/ArtGallery";
 import YesNo from "./pages/YesNo";
