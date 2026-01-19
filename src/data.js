@@ -21,12 +21,6 @@ export const ABOUT = {
   status: "Loved. Deeply. (Also: supervised by a sunset enthusiast)",
 };
 
-export const LAUGHS = [
-  "Having to let go of the MANY opportunities to bully me. Very generous",
-  "Ragebaiting...like it's an olympic sport",
-  "The weirdest fyp page I have ever seen...",
-  "btw, every opinion I have about you is a fact...do with that what you will...",
-];
 
 export const CHAT = [
   { who: "Me:", text: "GOOD MORNING SUNSHINE! the earth says HELLO!" },
@@ -37,13 +31,6 @@ export const CHAT = [
   { who: "You:", text: "رائع  (Mission accomplished: murderous intent vanquished)" },
 ];
 
-export const LEARNED = [
-  "Calm is better than chaos.",
-  "Quiet presence still counts.",
-  "‘We’ can feel light, not heavy.",
-  "Love doesn’t have to be loud to be real.",
-  "Humor is our emergency exit.",
-];
 
 export const SUN_MOON = {
   sunset:
