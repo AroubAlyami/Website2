@@ -1,5 +1,4 @@
 import React, { useMemo, useState, useEffect } from "react";
-
 import { STICKERS } from "../data";
 
 function rand(min, max) {
@@ -10,35 +9,34 @@ export default function StickerLayer({ enabled = true, density = 1 }) {
   const sources = STICKERS || [];
   const [placed, setPlaced] = useState([]);
 
-  const pick = useMemo(() => {
-    return sources.length ? sources : [];
-  }, [sources]);
+  const pick = useMemo(() => (sources.length ? sources : []), [sources]);
+
+  /* RANDOM AUTO STICKERS */
   useEffect(() => {
-  if (!enabled || pick.length === 0) return;
+    if (!enabled || pick.length === 0) return;
 
-  const interval = setInterval(() => {
-    const src = pick[Math.floor(Math.random() * pick.length)];
+    const interval = setInterval(() => {
+      const chosen = pick[Math.floor(Math.random() * pick.length)];
 
-    const newSticker = {
-      id: crypto.randomUUID(),
-      src,
-      x: rand(5, window.innerWidth - 5),
-      y: rand(5, window.innerHeight - 5),
-      size: rand(50, 95),
-      rot: rand(-30, 30),
-    };
+      const newSticker = {
+        id: crypto.randomUUID(),
+        src: chosen.src,
+        x: rand(20, window.innerWidth - 20),
+        y: rand(20, window.innerHeight - 20),
+        size: rand(55, 95),
+        rot: rand(-30, 30),
+      };
 
-    setPlaced((p) => [...p, newSticker].slice(-80));
-  }, 2500); // every 2.5 seconds
+      setPlaced((p) => [...p, newSticker].slice(-80));
+    }, 2500);
 
-  return () => clearInterval(interval);
-}, [enabled, pick]);
+    return () => clearInterval(interval);
+  }, [enabled, pick]);
 
-
+  /* CLICK STICKERS */
   const drop = (e) => {
     if (!enabled || pick.length === 0) return;
 
-    // If you click buttons/inputs/links, don't spam stickers
     const tag = e.target?.tagName?.toLowerCase();
     if (["button", "a", "input", "textarea", "select"].includes(tag)) return;
 
@@ -46,30 +44,29 @@ export default function StickerLayer({ enabled = true, density = 1 }) {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
+    const count = Math.max(1, Math.round(density));
+
     const newOnes = Array.from({ length: count }).map(() => {
-    const chosen = pick[Math.floor(Math.random() * pick.length)];
-    const src = chosen.src;
+      const chosen = pick[Math.floor(Math.random() * pick.length)];
 
-    return {
-      id: crypto.randomUUID(),
-      src,
-      x: x + rand(-18, 18),
-      y: y + rand(-18, 18),
-      size: rand(42, 90),
-      rot: rand(-25, 25),
-  };
-});
+      return {
+        id: crypto.randomUUID(),
+        src: chosen.src,
+        x: x + rand(-20, 20),
+        y: y + rand(-20, 20),
+        size: rand(45, 85),
+        rot: rand(-25, 25),
+      };
+    });
 
-    setPlaced((p) => [...p, ...newOnes].slice(-80)); // cap to prevent lag
+    setPlaced((p) => [...p, ...newOnes].slice(-80));
   };
 
   const clear = () => setPlaced([]);
 
   return (
     <div className="stickerZone" onClick={drop}>
-      <button className="stickerClear" onClick={clear} title="Clear stickers">
-        🧽
-      </button>
+      <button className="stickerClear" onClick={clear}>🧽</button>
 
       {placed.map((s) => (
         <img
@@ -81,7 +78,10 @@ export default function StickerLayer({ enabled = true, density = 1 }) {
             left: s.x,
             top: s.y,
             width: s.size,
+            position: "fixed",
             transform: `translate(-50%, -50%) rotate(${s.rot}deg)`,
+            pointerEvents: "none",
+            zIndex: 999,
           }}
           draggable={false}
         />
