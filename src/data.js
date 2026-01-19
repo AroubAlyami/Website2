@@ -200,4 +200,21 @@ export const ART_GALLERY = [
   },
 ];
 
+export const STICKERS = [
+  { name: "Az", src: "/stickers/Az.PNG" },
+  { name: "CanYouNot", src: "/stickers/CanYouNot.PNG" },
+  { name: "IQ", src: "/stickers/IQ.PNG" },
+  { name: "azooz", src: "/stickers/azooz.PNG" },
+  { name: "choke", src: "/stickers/choke.PNG" },
+  { name: "drama", src: "/stickers/drama.PNG" },
+  { name: "guilty", src: "/stickers/guilty.PNG" },
+  { name: "handshake", src: "/stickers/handshake.PNG" },
+  { name: "oops", src: "/stickers/oops.PNG" },
+  { name: "patpat", src: "/stickers/patpat.PNG" },
+  { name: "prettyBoi", src: "/stickers/prettyBoi.PNG" },
+  { name: "slippers", src: "/stickers/slippers.PNG" },
+  { name: "tehe", src: "/stickers/tehe.PNG" },
+  { name: "thumbsUp", src: "/stickers/thumbsUp.PNG" },
+  { name: "whoops", src: "/stickers/whoops.PNG" },
+];
 
