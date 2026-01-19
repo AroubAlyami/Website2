@@ -922,3 +922,20 @@ button.warm:hover {
   box-shadow: var(--glow-blue);
 }
 
+.sticker {
+  position: fixed;
+  z-index: 50;
+  pointer-events: none;
+  animation: popIn 0.4s ease;
+}
+
+@keyframes popIn {
+  from {
+    transform: translate(-50%, -50%) scale(0.6) rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1) rotate(var(--rot));
+    opacity: 1;
+  }
+}
