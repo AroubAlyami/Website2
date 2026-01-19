@@ -43,17 +43,19 @@ export const GIFT = {
 };
 
 // ====== Images you can fill in later ======
+const base = import.meta.env.BASE_URL;
+
 export const IMAGES = {
-  hero: "/images/hero.jpg",
-  about: "/images/about.jpg",
-  sunset: "/images/sunset.jpeg",
-  moon: "/images/moon.jpg",
-  us1: "/images/us1.jpg",
-  us2: "/images/us2.jpg",
+  hero: `${base}images/hero.jpg`,
+  about: `${base}images/about.jpg`,
+  sunset: `${base}images/sunset.jpeg`,
+  moon: `${base}images/moon.jpg`,
+  us1: `${base}images/us1.jpg`,
+  us2: `${base}images/us2.jpg`,
 };
 
+
 // ====== Our Future Cats ======
-const base = import.meta.env.BASE_URL;
 
 export const CATS = [
   { name: "Cat #1 Void", title: "CEO of naps", image: `${base}images/cats/void.jpeg` },
@@ -146,20 +148,20 @@ export const ART_GALLERY = [
 ];
 
 export const STICKERS = [
-  { name: "Az", src: "/stickers/Az.PNG" },
-  { name: "CanYouNot", src: "/stickers/CanYouNot.PNG" },
-  { name: "IQ", src: "/stickers/IQ.PNG" },
-  { name: "azooz", src: "/stickers/azooz.PNG" },
-  { name: "choke", src: "/stickers/choke.PNG" },
-  { name: "drama", src: "/stickers/drama.PNG" },
-  { name: "guilty", src: "/stickers/guilty.PNG" },
-  { name: "handshake", src: "/stickers/handshake.PNG" },
-  { name: "oops", src: "/stickers/oops.PNG" },
-  { name: "patpat", src: "/stickers/patpat.PNG" },
-  { name: "prettyBoi", src: "/stickers/prettyBoi.PNG" },
-  { name: "slippers", src: "/stickers/slippers.PNG" },
-  { name: "tehe", src: "/stickers/tehe.PNG" },
-  { name: "thumbsUp", src: "/stickers/thumbsUp.PNG" },
-  { name: "whoops", src: "/stickers/whoops.PNG" },
+  { name: "Az", src: `${base}stickers/Az.PNG` },
+  { name: "CanYouNot", src: `${base}stickers/CanYouNot.PNG` },
+  { name: "IQ", src: `${base}stickers/IQ.PNG` },
+  { name: "azooz", src: `${base}stickers/azooz.PNG` },
+  { name: "choke", src: `${base}stickers/choke.PNG` },
+  { name: "drama", src: `${base}stickers/drama.PNG` },
+  { name: "guilty", src: `${base}stickers/guilty.PNG` },
+  { name: "handshake", src: `${base}stickers/handshake.PNG` },
+  { name: "oops", src: `${base}stickers/oops.PNG` },
+  { name: "patpat", src: `${base}stickers/patpat.PNG` },
+  { name: "prettyBoi", src: `${base}stickers/prettyBoi.PNG` },
+  { name: "slippers", src: `${base}stickers/slippers.PNG` },
+  { name: "tehe", src: `${base}stickers/tehe.PNG` },
+  { name: "thumbsUp", src: `${base}stickers/thumbsUp.PNG` },
+  { name: "whoops", src: `${base}stickers/whoops.PNG` },
 ];
 
