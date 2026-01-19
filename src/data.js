@@ -32,13 +32,6 @@ export const CHAT = [
 ];
 
 
-export const SUN_MOON = {
-  sunset:
-    "I always loved sunsets. But now, I love them more because they remind me of you",
-  moon:
-    "I never noticed the moon before, not unitl you made me notice it. and now, I look for it every night. (Cute tidbit: I commented about the moon so much, my family now notices it as well)",
-};
-
 export const GIFT = {
   title: "One Last Thing 🎁",
   button: "Click if you’re feeling dramatic",
@@ -67,28 +60,6 @@ export const CATS = [
   { name: "Cat #3 Pokka", title: "Has opinions about everything", image: `${base}images/cats/pokka.jpeg` },
 ];
 
-export const TIMELINE = [
-  {
-    era: "Early",
-    title: "The exciting beginnings",
-    text: "Between small talk and laughs, things felt fun.",
-  },
-  {
-    era: "Middle",
-    title: "The no IQ era",
-    text: "Not a phase. More like a stupid break we both didn't want",
-  },
-  {
-    era: "Later",
-    title: "The RETURN",
-    text: "Not loud. Not dramatic. (Lies - Insanely dramatic). Just back to consistent in a way that matters.",
-  },
-  {
-    era: "Now",
-    title: "This website",
-    text: "Not meant to be impressive (it is fckin impressive). Meant to feel like effort and care (it is effort and care. FEEL CARED FOR RN OR I WILL BITE YOU).",
-  },
-];
 
 export const COMPLIMENTS = [
   "You're very calm",
@@ -117,7 +88,10 @@ export const COMPLIMENTS = [
   "My fav reoccuring thought (shawty like a melody in my head)",
   "if you were a form of lighting, you would be lowlights",
   "Loading compliment...whoops! couldn't find one cuz you pissed me off before I wrote this",
-  "I had something to say but I forgot"
+  "I had something to say but I forgot",
+  "If you were a dessert, you'd be my fav (yum, now I want creme caramel)",
+  "Ugh...okay, I will let your mom feed me whatever if it makes you laugh...(I draw the line at that fish)",
+  "Pro-Mincrafter"
 ];
 
 export const STICKERS = [
