@@ -10,7 +10,6 @@ import Compliments from "./pages/Compliments";
 import ArtGallery from "./pages/ArtGallery";
 import YesNo from "./pages/YesNo";
 import DoSomething from "./pages/DoSomething";
-
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Texts from "./pages/Texts";
@@ -41,7 +40,7 @@ function AppShell() {
   // Console easter egg
   useEffect(() => {
     // eslint-disable-next-line no-console
-    console.log("Happy birthday. You’re loved. No bugs here. (Probably.)");
+    console.log("Happy birthday. You’re loved. No bugs here. (Scratch that...more like bugs gallore. Consider it practice for when you get stranded on the island)");
   }, []);
 
   // Konami unlocks secret page
