@@ -2,17 +2,16 @@ import React from "react";
 import { motion } from "framer-motion";
 import Section from "../components/Section";
 import { SITE } from "../data";
-import AudioPlayer from "../components/AudioPlayer";
 
 export default function Home() {
   return (
     <Section
       title={`Happy Birthday, ${SITE.name} 🌅🌙`}
-      hint="Try typing: sunset, moon, or the Konami code 👀"
+      hint="Look at you...all grown up (and old)"
     >
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }}>
         <p className="lead">
-          Welcome to your birthday website. It contains affection, chaos, and very light cybersecurity.
+          Welcome to your birthday website. It contains affection, chaos, and very light cybersecurity (practically none. pls don't hack it).
         </p>
 
         <div className="pillRow">
@@ -21,7 +20,6 @@ export default function Home() {
           <span className="pill">☕ coffee reviews welcome</span>
         </div>
 
-        <AudioPlayer />
 
         <div className="miniNote">
           <strong>Note:</strong> This site is intentionally cozy, not intense. You are allowed to smile.
