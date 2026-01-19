@@ -24,18 +24,19 @@ export default function StickerLayer({ enabled = true, density = 1 }) {
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
-    const count = Math.max(1, Math.round(density));
     const newOnes = Array.from({ length: count }).map(() => {
-      const src = pick[Math.floor(Math.random() * pick.length)];
-      return {
-        id: crypto.randomUUID(),
-        src,
-        x: x + rand(-18, 18),
-        y: y + rand(-18, 18),
-        size: rand(42, 90),
-        rot: rand(-25, 25),
-      };
-    });
+    const chosen = pick[Math.floor(Math.random() * pick.length)];
+    const src = chosen.src;
+
+    return {
+      id: crypto.randomUUID(),
+      src,
+      x: x + rand(-18, 18),
+      y: y + rand(-18, 18),
+      size: rand(42, 90),
+      rot: rand(-25, 25),
+  };
+});
 
     setPlaced((p) => [...p, ...newOnes].slice(-80)); // cap to prevent lag
   };
