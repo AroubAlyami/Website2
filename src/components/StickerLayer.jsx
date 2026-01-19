@@ -56,13 +56,26 @@ export default function StickerLayer({ enabled = true, density = 1 }) {
         const h = window.innerHeight;
 
         const next = prev
-          .map((s) => ({
-            ...s,
-            x: s.x + s.vx,
-            y: s.y + s.vy,
-            rot: s.rot + s.spin,
-            life: s.life + 1,
-          }))
+          .map((s) => {
+            const h = window.innerHeight;
+            const fadeStart = h * 0.65;   // start fading after 65% down
+            const fadeEnd = h * 0.95;     // almost invisible near bottom
+
+            let opacity = 1;
+            if (s.y > fadeStart) {
+            opacity = Math.max(0, 1 - (s.y - fadeStart) / (fadeEnd - fadeStart));
+              }
+
+      return {
+        ...s,
+        x: s.x + s.vx,
+        y: s.y + s.vy,
+        rot: s.rot + s.spin,
+        life: s.life + 1,
+        opacity,
+  };
+})
+
           // remove once it drifts off the bottom (with a little buffer)
           .filter((s) => s.y < h + 140);
 
