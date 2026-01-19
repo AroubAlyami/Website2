@@ -5,11 +5,11 @@ export const SITE = {
   nicknameForYou: "غروب",
   youName: "Aroub",
   heroLine: "I made you a website because…of course I did.",
-  footerLine: "Built with love, caffeine, a few tears and rants w chatGPT, and absolutely zero guarantees of bug-free behavior.",
+  footerLine: "Built with love, caffeine, a few tears, strawberries, and a 100% guaruntee that you will laugh (that's a threat).",
 };
 
 export const ABOUT = {
-  aliases: ["Moon Man", "6×6", "Bathroom Door Destroyer", "Matcha man", "Fish"],
+  aliases: ["Moon Man", "6×6", "Bathroom Door Destroyer", "Matcha man", "Fish", "steve"],
   skills: [
     "Swimming...hence the 'Fish' nickname (Also, the horrendous memory)",
     "Professional Technical Menace (Red Team)",
@@ -17,6 +17,7 @@ export const ABOUT = {
     "Knows exactly which flowers I like",
     "Knows how to make me laugh (even mid crying session - which is impressive)",
     "Can fall asleep mid-serious-convo. Truly a talent",
+    "Hyperfocus. I have never seen anyone fixate on anything the way you do"
   ],
   status: "Loved. Deeply. (Also: supervised by a sunset enthusiast)",
 };
