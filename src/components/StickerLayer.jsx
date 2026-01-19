@@ -130,8 +130,10 @@ export default function StickerLayer({ enabled = true, density = 1 }) {
             left: s.x,
             top: s.y,
             width: s.size,
+            opacity: s.opacity ?? 1,
             transform: `translate(-50%, -50%) rotate(${s.rot}deg)`,
-          }}
+            }}
+
           draggable={false}
         />
       ))}
