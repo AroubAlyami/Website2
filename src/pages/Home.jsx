@@ -15,9 +15,7 @@ export default function Home() {
         </p>
 
         <div className="pillRow">
-          <span className="pill">🌅 for my {SITE.nicknameForYou}</span>
-          <span className="pill">🌙 for your moon era</span>
-          <span className="pill">☕ coffee reviews welcome</span>
+          <span className="pill">Welcome to your birthday website. It contains affection, chaos, and very light cybersecurity (practically none. pls don't hack it).</span>
         </div>
 
         <div className="giggleGifWrap">
