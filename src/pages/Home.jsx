@@ -20,6 +20,11 @@ export default function Home() {
           <span className="pill">☕ coffee reviews welcome</span>
         </div>
 
+        <div className="giggleGifWrap">
+          <img src="/gifs/feet.gif" alt="kicking feet" className="giggleGif" />
+        </div>
+
+
 
         <div className="miniNote">
           <strong>Note:</strong> This site is intentionally cozy, not intense. You are allowed to smile.
