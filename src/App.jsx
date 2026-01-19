@@ -102,7 +102,6 @@ useTypeEasterEgg({
           <Route path="/compliments" element={<Compliments />} />
           <Route path="/art-gallery" element={<ArtGallery />} />
           <Route path="/yesno" element={<YesNo />} />
-          <Route path="/kanye" element={<Kanye />} />
           <Route path="/do-something" element={<DoSomething />} />
 
 
