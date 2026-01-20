@@ -304,6 +304,16 @@ a:hover {
   margin-top: 2px;
 }
 
+.page {
+  display: grid;
+  gap: 1rem;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+
 .topbarRight {
   display: flex;
   align-items: center;
@@ -616,15 +626,6 @@ button.warm:hover {
     padding: 1rem;
     border-radius: 18px;
   }
-
-   .page {
-  display: grid;
-  gap: 1rem;
-
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 24px 16px;
-}
 
 
   .pageHero,
