@@ -384,10 +384,7 @@ a:hover {
 }
 
 /* Use this wrapper on pages */
-.page {
-  display: grid;
-  gap: 1rem;
-}
+
 
 /* Big hero section at top of a page */
 .pageHero {
@@ -620,6 +617,16 @@ button.warm:hover {
     border-radius: 18px;
   }
 
+   .page {
+  display: grid;
+  gap: 1rem;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+
   .pageHero,
   .section {
     padding: 1.15rem 1.1rem;
@@ -721,11 +728,6 @@ button.warm:hover {
   margin-top: 12px;
 }
 
-.page {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 24px 16px;
-}
 
 .pageTitle {
   font-size: 32px;
