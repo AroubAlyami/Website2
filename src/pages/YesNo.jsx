@@ -32,10 +32,11 @@ export default function YesNo() {
         </button>
       </div>
 
-      <div className="section stickerZone">
-        <StickerLayer enabled density={1} />
+      <StickerLayer enabled density={1} />
 
+        <div className="section">
         <div className="card" style={{ marginTop: 12 }}>
+
           <h2 style={{ marginBottom: 10 }}>{label || "Click “Ask again” 😗"}</h2>
 
           {answer?.image ? (
