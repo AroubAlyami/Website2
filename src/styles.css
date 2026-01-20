@@ -925,6 +925,17 @@ button.warm:hover {
   pointer-events: none; /* ✅ allows clicking the site */
 }
 
+/* Yes/No page widget should never float above the nav */
+.yesnoCard,
+.yesnoWidget,
+.yesnoWrap,
+.yesnoContainer,
+.section {
+  position: relative;
+  z-index: 1;
+}
+
+
 @keyframes popIn {
   from {
     transform: translate(-50%, -50%) scale(0.6) rotate(0deg);
