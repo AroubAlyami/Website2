@@ -925,6 +925,14 @@ button.warm:hover {
   box-shadow: var(--glow-blue);
 }
 
+/* Clear button should still be clickable */
+.stickerClear {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  pointer-events: auto;
+}
 .sticker {
   position: fixed;
   z-index: 50;
