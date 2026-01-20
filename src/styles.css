@@ -892,19 +892,6 @@ button.warm:hover {
   line-height: 1;
 }
 
-/* Your app should stay clickable too */
-.stickerZone {
-  background: transparent;
-}
-
-.sticker {
-  position: absolute;
-  pointer-events: none;
-  z-index: 4;
-  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.25));
-  opacity: 0.95;
-}
-
 /* Stickers themselves shouldn't block clicks */
 
 .stickerClear:hover {
@@ -917,13 +904,12 @@ button.warm:hover {
   bottom: 20px;
   right: 20px;
   z-index: 1000;
-  pointer-events: auto;
+  pointer-events: auto; /* ✅ clickable */
 }
 .sticker {
   position: fixed;
-  z-index: 50;
   pointer-events: none;
-  animation: popIn 0.4s ease;
+  user-select: none;
 }
 
 .stickerZone {
@@ -931,9 +917,8 @@ button.warm:hover {
   inset: 0;
   width: 100vw;
   height: 100vh;
-
-  z-index: 999;       /* above your UI */
-  pointer-events: auto; /* so clicks can spawn stickers */
+  z-index: 999;
+  pointer-events: none; /* ✅ allows clicking the site */
 }
 
 @keyframes popIn {
