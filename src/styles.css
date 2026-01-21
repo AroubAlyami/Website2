@@ -932,7 +932,8 @@ button.warm:hover {
 .yesnoCard,
 .yesnoWidget,
 .yesnoWrap,
-.yesnoContainer {
+.yesnoContainer,
+.section {
   position: relative;
   z-index: 1;
 }
