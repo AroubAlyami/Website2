@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import StickerLayer from "../components/StickerLayer";
 
 export default function DoSomething() {
   const [activity, setActivity] = useState(null);
