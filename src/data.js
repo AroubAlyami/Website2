@@ -207,7 +207,6 @@ export const STICKERS = [
   { name: "azooz", src: `${base}stickers/azooz.PNG` },
   { name: "choke", src: `${base}stickers/choke.PNG` },
   { name: "guilty", src: `${base}stickers/guilty.PNG` },
-  { name: "handshake", src: `${base}stickers/handshake.PNG` },
   { name: "patpat", src: `${base}stickers/patpat.PNG` },
   { name: "prettyBoi", src: `${base}stickers/prettyBoi.PNG` },
   { name: "slippers", src: `${base}stickers/slippers.PNG` },
