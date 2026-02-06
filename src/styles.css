@@ -949,3 +949,149 @@ button.warm:hover {
     opacity: 1;
   }
 }
+
+/* Letters - flip flashcards */
+
+.lettersGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 800px) {
+  .lettersGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.flipCard {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+
+  perspective: 1200px; /* 3D depth */
+}
+
+.flipInner {
+  position: relative;
+  width: 100%;
+  min-height: 220px;
+  border-radius: 18px;
+
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.flipCard.isFlipped .flipInner {
+  transform: rotateY(180deg);
+}
+
+.flipFace {
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(10px);
+
+  padding: 1.05rem 1.1rem;
+  backface-visibility: hidden;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.flipCard:hover .flipFace {
+  background: rgba(255,255,255,0.04);
+  border-color: rgba(34,211,238,0.18);
+}
+
+/* Front face */
+.flipFront {
+  transform: rotateY(0deg);
+}
+
+.flipTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 0.9rem;
+}
+
+.flipBadge {
+  font-size: 0.82rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(34,211,238,0.22);
+  background: rgba(34,211,238,0.08);
+  color: rgba(237,233,254,0.95);
+}
+
+.flipDate {
+  font-size: 0.85rem;
+  color: rgba(156,163,175,0.95);
+}
+
+.flipTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgba(237,233,254,0.95);
+  line-height: 1.25;
+  margin-bottom: auto;
+}
+
+.flipHint {
+  margin-top: 0.9rem;
+  font-size: 0.9rem;
+  color: rgba(156,163,175,0.95);
+}
+
+/* Back face */
+.flipBack {
+  transform: rotateY(180deg);
+}
+
+.flipBackTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 0.75rem;
+}
+
+.flipBackTitle {
+  font-weight: 700;
+  color: rgba(237,233,254,0.95);
+}
+
+.flipBackDate {
+  font-size: 0.85rem;
+  color: rgba(156,163,175,0.95);
+}
+
+.flipBody {
+  overflow: auto;
+  padding-right: 4px;
+  margin-bottom: auto;
+}
+
+.flipBody p {
+  margin: 0.55rem 0;
+  line-height: 1.65;
+  color: rgba(237,233,254,0.90);
+}
+
+/* Optional: nicer scrollbar (safe) */
+.flipBody::-webkit-scrollbar {
+  width: 8px;
+}
+.flipBody::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.12);
+  border-radius: 999px;
+}
+
