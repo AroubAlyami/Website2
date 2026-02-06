@@ -1147,4 +1147,56 @@ button.warm:hover {
   text-align: center;
 }
 
+/* Chat thread */
+.chatThread {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 720px;
+}
+
+.chatBubble {
+  max-width: 75%;
+  padding: 12px 14px;
+  border-radius: 16px;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  backdrop-filter: blur(8px);
+}
+
+.chatBubble .sender {
+  display: block;
+  font-size: 0.7rem;
+  opacity: 0.65;
+  margin-bottom: 4px;
+  letter-spacing: 0.3px;
+}
+
+.chatBubble p {
+  margin: 0;
+}
+
+.chatBubble.me {
+  align-self: flex-start;
+  background: rgba(124, 58, 237, 0.12);
+  border: 1px solid rgba(124, 58, 237, 0.25);
+}
+
+.chatBubble.you {
+  align-self: flex-end;
+  background: rgba(34, 211, 238, 0.14);
+  border: 1px solid rgba(34, 211, 238, 0.28);
+}
+
+.chatBubble.system {
+  align-self: center;
+  background: transparent;
+  border: none;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  font-style: italic;
+  text-align: center;
+}
+
+
 
