@@ -9,37 +9,30 @@ export default function Home() {
       title={`Happy Birthday, ${SITE.name} 🌅🌙`}
       hint="Look at you...all grown up (and old)"
     >
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.15 }}>
-        <p className="lead">
-          Welcome to your birthday website. It contains affection, chaos, and very light cybersecurity (practically none. pls don't hack it).
-        </p>
-
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.15 }}
+      >
         <div className="welcomeBlock">
-  <p className="welcomeText">
-    Welcome to your birthday website. It contains affection, chaos,
-    and very light cybersecurity (practically none. pls don't hack it).
-  </p>
+          <p className="welcomeText">
+            Welcome to your birthday website. It contains affection, chaos, and
+            very light cybersecurity (practically none. pls don't hack it).
+          </p>
 
-  <div className="giggleGifWrap">
-    <img
-      src={`${import.meta.env.BASE_URL}gifs/feet.gif`}
-      alt="kicking feet"
-      className="giggleGif"
-    />
-    <span className="gifCaption">you rn</span>
-  </div>
+          <div className="giggleGifWrap">
+            <img
+              src={`${import.meta.env.BASE_URL}gifs/feet.gif`}
+              alt="kicking feet"
+              className="giggleGif"
+            />
+            <span className="gifCaption">you rn</span>
+          </div>
 
-  <p className="miniNote">
-    <strong>Note:</strong> This site is intentionally cozy, not intense.
-    You are allowed to smile.
-  </p>
-</div>
-
-
-
-
-        <div className="miniNote">
-          <strong>Note:</strong> This site is intentionally cozy, not intense. You are allowed to smile.
+          <p className="miniNote">
+            <strong>Note:</strong> This site is intentionally cozy, not intense.
+            You are allowed to smile.
+          </p>
         </div>
       </motion.div>
     </Section>
