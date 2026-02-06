@@ -19,7 +19,7 @@ export default function Home() {
         </div>
 
         <div className="giggleGifWrap">
-          <img src="/gifs/feet.gif" alt="kicking feet" className="giggleGif" />
+          <img src={`${import.meta.env.BASE_URL}gifs/feet.gif`} alt="kicking feet" className="giggleGif"/>
         </div>
 
 
