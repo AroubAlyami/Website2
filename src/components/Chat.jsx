@@ -1,14 +1,30 @@
 import React from "react";
 
-export default function Chat({ items }) {
+function classifyWho(who = "") {
+  const w = who.toLowerCase();
+  if (w.includes("system") || w.includes("narrator")) return "system";
+  if (w.trim().startsWith("you")) return "you";
+  return "me";
+}
+
+function cleanLabel(who = "") {
+  return who.replace(/:$/, "").trim();
+}
+
+export default function Chat({ items = [] }) {
   return (
-    <div className="chat">
-      {items.map((m, i) => (
-        <div key={i} className={`bubble ${m.who === "You" ? "you" : "him"}`}>
-          <div className="who">{m.who}</div>
-          <div className="text">{m.text}</div>
-        </div>
-      ))}
+    <div className="chatThread">
+      {items.map((m, idx) => {
+        const side = classifyWho(m.who);
+        const label = cleanLabel(m.who);
+
+        return (
+          <div key={idx} className={`chatBubble ${side}`}>
+            <span className="sender">{label}</span>
+            <p className="chatText">{m.text}</p>
+          </div>
+        );
+      })}
     </div>
   );
 }
