@@ -26,7 +26,6 @@ export default function Home() {
               alt="kicking feet"
               className="giggleGif"
             />
-            <span className="gifCaption">you rn</span>
           </div>
 
           <p className="miniNote">
