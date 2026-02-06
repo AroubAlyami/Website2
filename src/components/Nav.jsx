@@ -11,7 +11,6 @@ export default function Nav({ secretUnlocked }) {
       <NavLink to="/compliments">Compliments</NavLink>
       <NavLink to="/art-gallery">Art gallery</NavLink>
       <NavLink to="/yesno">Yes/No</NavLink>
-      <NavLink to="/do-something">Do something</NavLink>
       <NavLink to="/gift">Gift</NavLink>
 
 
