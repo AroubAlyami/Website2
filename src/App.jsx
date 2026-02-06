@@ -14,7 +14,9 @@ import About from "./pages/About";
 import Texts from "./pages/Texts";
 import Gift from "./pages/Gift";
 import Secret from "./pages/Secret";
-  import StickerLayer from "./components/StickerLayer";
+import StickerLayer from "./components/StickerLayer";
+import Letters from "./pages/Letters";
+
 
 
 function ScrollToTopOnRoute() {
@@ -104,6 +106,8 @@ useTypeEasterEgg({
           <Route path="/compliments" element={<Compliments />} />
           <Route path="/art-gallery" element={<ArtGallery />} />
           <Route path="/yesno" element={<YesNo />} />
+          <Route path="/letters" element={<Letters />} />
+
 
 
 
