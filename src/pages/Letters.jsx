@@ -62,7 +62,7 @@ export default function Letters() {
       </div>
 
       <div className="miniNote">
-        Tip: If you want multiple cards open at once, tell me and I’ll switch it to per-card toggles.
+        Tip: Get some snacks. munching and reading is so fun.
       </div>
     </Section>
   );
