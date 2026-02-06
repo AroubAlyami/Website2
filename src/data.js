@@ -168,16 +168,124 @@ export const STICKERS = [
 export const UNSENT_LETTERS = [
   {
     id: 1,
-    title: "On days I stayed quiet",
+    title: "A few very serious facts",
     date: "Undated",
     body: `
-I didn’t stop talking because I had nothing to say.
-I stopped because I didn’t want to make the moment heavier.
+Hi you,
 
-There were things I wanted to explain,
-but they felt safer living quietly between us.
+Here are some verified, peer-reviewed facts I’ve gathered over time:
 
-Not everything needs a witness.
+1. You look better when you’re stressed, which is unfair.
+2. Your voice notes should honestly be a paid podcast.
+3. You sending pictures to make me feel better works every single time.
+4. You disappearing does not make me forget you exist. Nice try though.
+
+In conclusion:
+You are deeply annoying (affectionate), surprisingly gentle, and very loved.
+
+No further questions at this time.
+
+— Me
+    `,
+  },
+  {
+    id: 2,
+    title: "Things you do that you don’t realize I love",
+    date: "Undated",
+    body: `
+You might not know this, but I love:
+
+• How dramatic you are when you’re tired  
+• How seriously you take food decisions  
+• How you randomly remember details about me  
+• How you pretend you’re calm when you are very much not calm  
+• How protective you get in the most unserious ways  
+
+You think you’re just existing.
+You’re actually doing a lot.
+
+Carry on.
+    `,
+  },
+  {
+    id: 3,
+    title: "What I’m building with you",
+    date: "Undated",
+    body: `
+I’m not building something loud.
+I’m building something steady.
+
+A space where we feel safe to be human.
+Where stress doesn’t mean disappearance forever.
+Where silence doesn’t mean loss.
+
+We have a partnership where we protect each other’s hearts,
+not test their limits.
+
+This is the kind of love I’m choosing.
+And I’m choosing it with you...always
+    `,
+  },
+  {
+    id: 4,
+    title: "What feels easy with you",
+    date: "Undated",
+    body: `
+Being with you feels easy in a way I didn’t expect.
+
+Not effortless, but natural.
+Like I don’t have to explain myself halfway through a sentence.
+Like laughter shows up on its own.
+
+You don’t overwhelm me.
+You don’t drain me.
+You make things feel lighter just by being there.
+
+That matters more than you know.
+    `,
+  },
+  {
+    id: 5,
+    title: "Why I trust you",
+    date: "Undated",
+    body: `
+I trust you not because you’re perfect (I can hear the "But I AM perfect"),
+but because you’re honest.
+
+You don’t pretend to be something you’re not.
+You don’t perform feelings you don’t have.
+When you care, it’s real.
+
+I trust your intentions.
+I trust your heart.
+And I trust that when things matter, you show up in the way that counts.
+
+That kind of trust isn’t loud.
+It’s steady.
+    `,
+  },
+  {
+    id: 6,
+    title: "A formal complaint about your existence",
+    date: "Filed: Immediately",
+    body: `
+To whom it may concern,
+
+I would like to report the following repeated offenses:
+
+1. Being funny at inconvenient times.
+2. Acting calm while clearly plotting nonsense.
+3. Leaving me to miss you like it’s a hobby.
+
+Requested resolution:
+One (1) apology in the form of coffee.
+Two (2) pictures that make me feel better.
+And a strict policy against disappearing without explanation.
+
+This report is submitted with affection and mild dramatic energy.
+
+Sincerely,
+Me
     `,
   },
 ];
