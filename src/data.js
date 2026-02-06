@@ -165,3 +165,20 @@ export const STICKERS = [
   { name: "whoops", src: `${base}stickers/whoops.PNG` },
 ];
 
+export const UNSENT_LETTERS = [
+  {
+    id: 1,
+    title: "On days I stayed quiet",
+    date: "Undated",
+    body: `
+I didn’t stop talking because I had nothing to say.
+I stopped because I didn’t want to make the moment heavier.
+
+There were things I wanted to explain,
+but they felt safer living quietly between us.
+
+Not everything needs a witness.
+    `,
+  },
+];
+
