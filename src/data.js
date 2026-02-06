@@ -103,7 +103,7 @@ export const ART_GALLERY = [
   {
     src: "art/sunset.jpeg",
     title: "Sunset",
-    note: "Vibrant...what the taste of mango would look like",
+    note: "Vibrant… what the taste of mango would look like",
   },
   {
     src: "art/MoonMountain.jpeg",
@@ -145,7 +145,60 @@ export const ART_GALLERY = [
     title: "Star Camp",
     note: "Adam with his camel",
   },
+
+  // WhatsApp series (10 images)
+  {
+    src: "art/gallery-01.jpeg",
+    title: "Unsent, I",
+    note: "A quiet beginning",
+  },
+  {
+    src: "art/gallery-02.jpeg",
+    title: "Unsent, II",
+    note: "Stillness in color",
+  },
+  {
+    src: "art/gallery-03.jpeg",
+    title: "Unsent, III",
+    note: "Where the light softened",
+  },
+  {
+    src: "art/gallery-04.jpeg",
+    title: "Unsent, IV",
+    note: "Almost a memory",
+  },
+  {
+    src: "art/gallery-05.jpeg",
+    title: "Unsent, V",
+    note: "Holding the frame",
+  },
+  {
+    src: "art/gallery-06.jpeg",
+    title: "Unsent, VI",
+    note: "Before it changed",
+  },
+  {
+    src: "art/gallery-07.jpeg",
+    title: "Unsent, VII",
+    note: "Something familiar",
+  },
+  {
+    src: "art/gallery-08.jpeg",
+    title: "Unsent, VIII",
+    note: "The quiet stretch",
+  },
+  {
+    src: "art/gallery-09.jpeg",
+    title: "Unsent, IX",
+    note: "Nearly said",
+  },
+  {
+    src: "art/gallery-10.jpeg",
+    title: "Unsent, X",
+    note: "Still here",
+  },
 ];
+
 
 export const STICKERS = [
   { name: "Az", src: `${base}stickers/Az.PNG` },
