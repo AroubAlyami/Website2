@@ -9,7 +9,6 @@ import Cats from "./pages/Cats";
 import Compliments from "./pages/Compliments";
 import ArtGallery from "./pages/ArtGallery";
 import YesNo from "./pages/YesNo";
-import DoSomething from "./pages/DoSomething";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Texts from "./pages/Texts";
@@ -105,7 +104,6 @@ useTypeEasterEgg({
           <Route path="/compliments" element={<Compliments />} />
           <Route path="/art-gallery" element={<ArtGallery />} />
           <Route path="/yesno" element={<YesNo />} />
-          <Route path="/do-something" element={<DoSomething />} />
 
 
 
