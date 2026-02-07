@@ -9,17 +9,17 @@ export const SITE = {
 };
 
 export const ABOUT = {
-  aliases: ["Moon Man", "6×6", "Bathroom Door Destroyer", "Matcha man", "Fish", "steve"],
+  aliases: ["Moon Man", "6×6", "Bathroom Door Destroyer", "Matcha man", "Fish", "steve (Minecraft reference)"],
   skills: [
     "Swimming...hence the 'Fish' nickname (Also, the horrendous memory)",
     "Professional Technical Menace (Red Team)",
     "Crisis management during PMS (elite)",
     "Knows exactly which flowers I like",
     "Knows how to make me laugh (even mid crying session - which is impressive)",
-    "Can fall asleep mid-serious-convo. Truly a talent",
-    "Hyperfocus. I have never seen anyone fixate on anything the way you do"
+    "Can fall asleep mid-serious-convo.",
+    "Hyperfocus: I have never seen anyone fixate on anything the way you do"
   ],
-  status: "Loved. Deeply. (Also: supervised by a sunset enthusiast)",
+  status: "Loved. Alot. (Also: the good kind of bully)",
 };
 
 
