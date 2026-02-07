@@ -950,8 +950,7 @@ button.warm:hover {
   }
 }
 
-/* Letters - flip flashcards */
-
+/* Letters grid */
 .lettersGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -964,58 +963,26 @@ button.warm:hover {
   }
 }
 
-.flipCard {
+/* Closed card */
+.letterCard {
   width: 100%;
-  border: none;
-  background: transparent;
-  padding: 0;
-  cursor: pointer;
-  text-align: left;
-
-  perspective: 1200px; /* 3D depth */
-}
-
-.flipInner {
-  position: relative;
-  width: 100%;
-  min-height: 220px;
-  border-radius: 18px;
-
-  transform-style: preserve-3d;
-  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.flipCard.isFlipped .flipInner {
-  transform: rotateY(180deg);
-}
-
-.flipFace {
-  position: absolute;
-  inset: 0;
-  border-radius: 18px;
-
   border: 1px solid rgba(255,255,255,0.10);
   background: rgba(255,255,255,0.03);
-  backdrop-filter: blur(10px);
-
+  border-radius: 18px;
   padding: 1.05rem 1.1rem;
-  backface-visibility: hidden;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  cursor: pointer;
+  text-align: left;
+  color: inherit;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
-.flipCard:hover .flipFace {
+.letterCard:hover {
+  transform: translateY(-2px);
   background: rgba(255,255,255,0.04);
   border-color: rgba(34,211,238,0.18);
 }
 
-/* Front face */
-.flipFront {
-  transform: rotateY(0deg);
-}
-
-.flipTop {
+.letterCardTop {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1023,7 +990,7 @@ button.warm:hover {
   margin-bottom: 0.9rem;
 }
 
-.flipBadge {
+.letterBadge {
   font-size: 0.82rem;
   padding: 0.25rem 0.55rem;
   border-radius: 999px;
@@ -1032,68 +999,112 @@ button.warm:hover {
   color: rgba(237,233,254,0.95);
 }
 
-.flipDate {
+.letterDate {
   font-size: 0.85rem;
   color: rgba(156,163,175,0.95);
 }
 
-.flipTitle {
-  font-size: 1.2rem;
+.letterCardTitle {
+  font-size: 1.15rem;
   font-weight: 700;
   color: rgba(237,233,254,0.95);
   line-height: 1.25;
-  margin-bottom: auto;
+  margin-bottom: 0.6rem;
 }
 
-.flipHint {
-  margin-top: 0.9rem;
+.letterCardHint {
   font-size: 0.9rem;
   color: rgba(156,163,175,0.95);
 }
 
-/* Back face */
-.flipBack {
-  transform: rotateY(180deg);
+/* Overlay */
+.letterOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  padding: 18px;
 }
 
-.flipBackTop {
+.letterOverlayBackdrop {
+  position: absolute;
+  inset: 0;
+  border: none;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+}
+
+/* Modal */
+.letterModal {
+  position: relative;
+  width: min(760px, 92vw);
+  max-height: min(78vh, 740px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(18, 8, 34, 0.88);
+  box-shadow: 0 22px 70px rgba(0,0,0,0.55);
+  overflow: hidden;
+
+  transform: scale(0.96);
+  opacity: 0;
+  animation: letterPop 0.18s ease forwards;
+}
+
+@keyframes letterPop {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.letterModalHeader {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  gap: 10px;
-  margin-bottom: 0.75rem;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 16px 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.flipBackTitle {
-  font-weight: 700;
+.letterModalTitle {
+  font-weight: 800;
   color: rgba(237,233,254,0.95);
 }
 
-.flipBackDate {
+.letterModalDate {
+  margin-top: 4px;
   font-size: 0.85rem;
   color: rgba(156,163,175,0.95);
 }
 
-.flipBody {
-  overflow: auto;
-  padding-right: 4px;
-  margin-bottom: auto;
+.letterCloseBtn {
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  color: rgba(237,233,254,0.92);
+  padding: 0.5rem 0.8rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.flipBody p {
-  margin: 0.55rem 0;
-  line-height: 1.65;
+.letterCloseBtn:hover {
+  background: rgba(255,255,255,0.10);
+  transform: translateY(-1px);
+}
+
+.letterModalBody {
+  padding: 14px 16px 18px;
+  overflow: auto;
+}
+
+.letterModalBody p {
+  margin: 0.65rem 0;
+  line-height: 1.7;
   color: rgba(237,233,254,0.90);
 }
 
-/* Optional: nicer scrollbar (safe) */
-.flipBody::-webkit-scrollbar {
-  width: 8px;
-}
-.flipBody::-webkit-scrollbar-thumb {
-  background: rgba(255,255,255,0.12);
-  border-radius: 999px;
-}
 
 /* Chat thread container */
 .chatThread {
