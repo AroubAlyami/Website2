@@ -12,6 +12,8 @@ function cleanLabel(who = "") {
 }
 
 export default function Chat({ items = [] }) {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <div className="chatThread">
       {items.map((m, idx) => {
@@ -21,6 +23,16 @@ export default function Chat({ items = [] }) {
         return (
           <div key={idx} className={`chatBubble ${side}`}>
             <span className="sender">{label}</span>
+
+            {m.sticker && (
+              <img
+                src={`${base}${m.sticker}`}
+                alt="sticker"
+                className="chatSticker"
+                loading="lazy"
+              />
+            )}
+
             <p className="chatText">{m.text}</p>
           </div>
         );
