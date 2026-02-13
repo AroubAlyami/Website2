@@ -6,7 +6,7 @@ import { SITE } from "../data";
 export default function Home() {
   return (
     <Section
-      title={`Happy Birthday, ${SITE.name} 🌅🌙`}
+      title={`Happy Birthday, ${SITE.nicknameForHim} 🌅🌙`}
       hint="Look at you...all grown up (and old)"
     >
       <motion.div
