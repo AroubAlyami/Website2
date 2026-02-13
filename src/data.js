@@ -296,7 +296,7 @@ You don’t overwhelm me.
 You don’t drain me.
 You make things feel lighter just by being there.
 
-That matters more than you know.
+And that matters more than you know.
     `,
   },
   {
